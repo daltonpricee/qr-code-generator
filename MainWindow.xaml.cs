@@ -17,6 +17,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ZXing;
 using ZXing.ZKWeb;
+/**
+*Author: Dalton Price
+*Version: 6/15/22
+*/
 
 namespace GenerateQRCode
 {
