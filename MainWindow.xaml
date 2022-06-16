@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GenerateQRCode"
         mc:Ignorable="d"
-        Title="Generate your own unique QR Code" Height="450" Width="800">
+        Title="Generate your own unique QR Code" Height="500" Width="790">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -19,15 +19,27 @@
             <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="QR CODE CREATOR" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" RenderTransformOrigin="0.492,-0.07" Margin="0,18,0,0"/>
-        <TextBlock Text="QR CODE CONTENT :" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="63,0,0,0"/>
-        <TextBox Grid.Column="1" Name="txtbarcodecontent" Margin="0,94,0,6" Grid.RowSpan="2"/>
-        <Button Content="CREATE" Name="btnConvert" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Width="100" Click="BtnConvert_Click" Margin="0,5,0,195" Grid.RowSpan="2"/>
-        <TextBlock Text="YOUR QR CODE:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,10,0,0" RenderTransformOrigin="0.501,0.699"/>
+        <TextBlock Text="QR   CODE   CREATOR" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="DilleniaUPC" RenderTransformOrigin="0.492,-0.07" Margin="52,23,0,0"/>
+        <TextBlock Text="QR CODE CONTENT :" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="64,0,0,0" FontWeight="Bold" FontSize="15" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="1" Name="txtbarcodecontent" Margin="16,2,184,2" Height="25" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Content="CREATE" Name="btnConvert" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="100" Click="BtnConvert_Click" Margin="78,10,0,190" Grid.RowSpan="2"/>
+        <TextBlock Text="YOUR QR CODE:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,18,0,0" RenderTransformOrigin="0.501,0.699" FontWeight="Bold"/>
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="0,34,0,30" Grid.RowSpan="2">
             <Image Name="imgbarcode"/>
             <TextBlock Name="tbkbarcodecontent" FontWeight="Bold" HorizontalAlignment="Center"/>
         </StackPanel>
-        <Label Content="Generate your own QR Code instantly!" Grid.Column="1" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top"/>
+        <Label Content="Generate your own QR Code instantly!" Grid.Column="1" HorizontalAlignment="Left" Margin="65,64,0,0" VerticalAlignment="Top"/>
+
+        <Button Height="50" Width="50" Grid.Column="2" Margin="75,90,75,30" Grid.RowSpan="3" Click="Button_Click" Content="I'm feeling lu&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;cky" Background="#FFBB2424">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image x:Name="shuffle1_jpg" Source="C:\\Users\\TDL_User\\Pictures\\shuffle4.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label Content="Surprise Me&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" FontSize="15" Margin="0,10,0,0" Grid.RowSpan="2"/>
+        <Button Name="clearButton" Height="41" Width="95" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Margin="211,10,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click_1" Grid.RowSpan="2"/>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.ColumnSpan="3" Margin="174,15,176,49" Grid.RowSpan="2"/>
+
     </Grid>
 </Window>
