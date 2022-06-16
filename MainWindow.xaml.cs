@@ -103,6 +103,8 @@ namespace GenerateQRCode
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             txtbarcodecontent.Text = null;
+            this.imgbarcode.Source = null;
+            this.tbkbarcodecontent.Text = null;
         }
     }
 
