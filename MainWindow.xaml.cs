@@ -60,8 +60,12 @@ namespace GenerateQRCode
                     bimg.StreamSource = ms;
                     bimg.EndInit();
                     this.imgbarcode.Source = bimg;
+                   
                     //Message under generated code
                     this.tbkbarcodecontent.Text = "Enjoy your QR code!";
+
+                  
+
                 }
             }
             catch (Exception ex)
@@ -107,5 +111,5 @@ namespace GenerateQRCode
             this.tbkbarcodecontent.Text = null;
         }
     }
-
+   
 }

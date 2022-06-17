@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GenerateQRCode"
         mc:Ignorable="d"
-        Title="Generate your own unique QR Code" Height="500" Width="790">
+        Title="Generate your own unique QR Code" Height="525" Width="790">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -19,16 +19,16 @@
             <RowDefinition Height="200"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="QR   CODE   CREATOR" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" FontFamily="DilleniaUPC" RenderTransformOrigin="0.492,-0.07" Margin="52,23,0,0"/>
+        <TextBlock Text="Q R   C O D E   C R E A T O R" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold" FontSize="27" FontFamily="DilleniaUPC" RenderTransformOrigin="0.492,-0.07" Margin="16,14,0,0"/>
         <TextBlock Text="QR CODE CONTENT :" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="64,0,0,0" FontWeight="Bold" FontSize="15" Grid.ColumnSpan="2"/>
         <TextBox Grid.Column="1" Name="txtbarcodecontent" Margin="16,2,184,2" Height="25" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Button Content="CREATE" Name="btnConvert" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="100" Click="BtnConvert_Click" Margin="78,10,0,190" Grid.RowSpan="2"/>
-        <TextBlock Text="YOUR QR CODE:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,18,0,0" RenderTransformOrigin="0.501,0.699" FontWeight="Bold"/>
+        <Button Content="CREATE" Height="35" Name="btnConvert" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="100" Click="BtnConvert_Click" Margin="78,10,0,190" Grid.RowSpan="2"/>
+        <TextBlock Text="YOUR QR CODE:" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Margin="0,18,0,0" RenderTransformOrigin="0.501,0.699" FontWeight="Bold" FontSize="15"/>
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" Margin="0,34,0,30" Grid.RowSpan="2">
             <Image Name="imgbarcode"/>
             <TextBlock Name="tbkbarcodecontent" FontWeight="Bold" HorizontalAlignment="Center"/>
         </StackPanel>
-        <Label Content="Generate your own QR Code instantly!" Grid.Column="1" HorizontalAlignment="Left" Margin="65,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="Generate your own QR Code instantly!" Grid.Column="1" HorizontalAlignment="Left" Margin="65,53,0,0" VerticalAlignment="Top" FontWeight="DemiBold" FontSize="13"/>
 
         <Button Height="50" Width="50" Grid.Column="2" Margin="75,85,75,35" Grid.RowSpan="3" Click="Button_Click" Content="I'm feeling lu&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;cky" Background="#FFBB2424">
             <Button.Template>
@@ -38,8 +38,40 @@
             </Button.Template>
         </Button>
         <Label Content="Surprise Me&#xD;&#xA;" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Top" FontSize="15" Margin="0,1,0,0" Grid.RowSpan="2"/>
-        <Button Name="clearButton" Height="41" Width="95" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Margin="211,10,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click_1" Grid.RowSpan="2"/>
-        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.ColumnSpan="3" Margin="181,15,176,49" Grid.RowSpan="2"/>
+        <Button Name="clearButton" Height="35" Width="95" Content="Clear" Grid.Column="1" HorizontalAlignment="Left" Margin="211,10,0,0" Grid.Row="2" VerticalAlignment="Top" Click="Button_Click_1" Grid.RowSpan="2"/>
+        <Border BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.ColumnSpan="3" Margin="181,15,184,49" Grid.RowSpan="2"/>
+        <Image Source="C:\\Users\\TDL_User\\Pictures\\img2.png" HorizontalAlignment="Left" Height="52" Margin="153,30,0,0" Grid.Row="2" VerticalAlignment="Top" Width="47" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.037"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="C:\\Users\\TDL_User\\Pictures\\img2.png" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="378,22,0,0" Grid.Row="2" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.487,0.56" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180.754"/>
+                    <TranslateTransform X="1.311" Y="-6.249"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="C:\\Users\\TDL_User\\Pictures\\img2.png" HorizontalAlignment="Left" Height="52" Margin="150,45,0,0" Grid.Row="4" VerticalAlignment="Top" Width="50"/>
+        <Image Source="C:\\Users\\TDL_User\\Pictures\\img2.png" Grid.Column="2" HorizontalAlignment="Left" Height="52" Margin="4,46,0,0" Grid.Row="4" VerticalAlignment="Top" Width="49" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.549"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="C:\\Users\\TDL_User\\Pictures\\qr.png" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="62" Margin="138,0,0,0" VerticalAlignment="Top" Width="73"/>
 
     </Grid>
 </Window>
