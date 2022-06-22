@@ -1,8 +1,10 @@
-﻿using Microsoft.Win32;
+﻿
+using Microsoft.Win32;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,10 +28,10 @@ namespace GenerateQRCode
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
-
         }
 
         /**
@@ -41,6 +43,7 @@ namespace GenerateQRCode
             try
             {
                 BitmapImage bimg = new BitmapImage();
+                List<BitmapImage> imageList = new List<BitmapImage>();
                 using (var ms = new MemoryStream())
                 {
                     ZXing.BarcodeWriter writer;
@@ -60,56 +63,50 @@ namespace GenerateQRCode
                     bimg.StreamSource = ms;
                     bimg.EndInit();
                     this.imgbarcode.Source = bimg;
-                   
-                    //Message under generated code
-                    this.tbkbarcodecontent.Text = "Enjoy your QR code!";
 
-                  
+                    this.tbkbarcodecontent.Text = "Enjoy your QR code!";
+                    this.tbkbarcodecontent.FontSize = 15;
+
+
 
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Enter something to create first.");
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void DiceRollButton(object sender, RoutedEventArgs e)
 
         {
-             var arlist1 = new List<string>()
-        {
-            "https://stackoverflow.com/",
-            "https://www.youtube.com/",
-            "https://www.nfl.com/",
-            "https://www.spotify.com/",
-            "https://twitter.com/explore",
-            "https://www.netflix.com/",
-            "https://www.hulu.com/start",
-            "https://www.apple.com/",
-            "https://www.disney.com/",
-            "https://www.mlb.com/",
-            "https://www.nba.com/",
-            "https://www.google.com/",
-            "https://www.wikipedia.org/",
-            "https://www.espn.com/",
-            "https://weather.com/"
+            var arlist1 = new List<string>();
+            int counter = 0;
 
-        };
+            // Read the file and display it line by line.  
+            foreach (string line in System.IO.File.ReadLines("C:\\Users\\TDL_User\\Documents\\sites.txt"))
+            {
+                System.Console.WriteLine(line);
+                arlist1.Add(line);
+                counter++;
+            }
+
             Random random = new Random();
             int index = random.Next(arlist1.Count);
             var name = arlist1[index].ToString();
             arlist1.RemoveAt(index);
-            txtbarcodecontent.Text = name;
-
+            this.txtbarcodecontent.Text = name;
+            
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        public void ClearcontentsButton(object sender, RoutedEventArgs e)
         {
-            txtbarcodecontent.Text = null;
+            this.txtbarcodecontent.Text = null;
             this.imgbarcode.Source = null;
             this.tbkbarcodecontent.Text = null;
         }
     }
+
+   
    
 }
