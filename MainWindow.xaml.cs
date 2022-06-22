@@ -65,7 +65,7 @@ namespace GenerateQRCode
                     this.imgbarcode.Source = bimg;
 
                     this.tbkbarcodecontent.Text = "Enjoy your QR code!";
-                    this.tbkbarcodecontent.FontSize = 15;
+                    this.tbkbarcodecontent.FontSize = 19;
 
 
 

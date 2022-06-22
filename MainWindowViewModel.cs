@@ -9,6 +9,8 @@ namespace GenerateQRCode
         public MainWindowViewModel()
         {
             codeContent = "";
+            CreateCommand c = new CreateCommand();
+            
            
         }
     }
