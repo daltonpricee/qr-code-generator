@@ -32,6 +32,7 @@ namespace GenerateQRCode
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         /**
@@ -69,11 +70,13 @@ namespace GenerateQRCode
 
 
 
+
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Enter something to create first.");
+                MessageBox.Show("To generate a code, first enter some content for it.", "Error"
+                , MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -96,7 +99,7 @@ namespace GenerateQRCode
             var name = arlist1[index].ToString();
             arlist1.RemoveAt(index);
             this.txtbarcodecontent.Text = name;
-            
+
         }
 
         public void ClearcontentsButton(object sender, RoutedEventArgs e)
@@ -105,8 +108,19 @@ namespace GenerateQRCode
             this.imgbarcode.Source = null;
             this.tbkbarcodecontent.Text = null;
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult closingMessegeBoxResult = MessageBox.Show("If you close now, any unsaved codes will be lost. Still close?", "Unsaved ",
+                MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if (closingMessegeBoxResult != MessageBoxResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
     }
+}
+
+
 
    
-   
-}
